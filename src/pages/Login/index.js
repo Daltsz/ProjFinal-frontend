@@ -9,7 +9,7 @@ export default function Login() {
 
     const[value, setValue] = useState('');
     const[error, setError ] = useState([]);
-    const[success, setSuccess]= useState('');
+    const[success, setSuccess]= useState([]);
     const[datas, setDatas] = useState({}); 
 
 
