@@ -69,7 +69,7 @@ export default function Cadastro() {
 
                 setTimeout(function(){
     
-                    console.log(window.location.href = "../");
+                    console.log(window.location.href = "../login");
                     
                 
                 },3000);
