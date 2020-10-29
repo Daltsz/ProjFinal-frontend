@@ -69,7 +69,7 @@ export default function Cadastro() {
 
                 setTimeout(function(){
     
-                    window.location = 'https://projfinal-frontend.herokuapp.com/';
+                    window.location.assign("https://projfinal-frontend.herokuapp.com/");
                 
                 
                 },3000);
