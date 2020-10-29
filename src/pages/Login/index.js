@@ -69,9 +69,11 @@ export default function Login() {
             
             setValue(resp.data);
 
+            setTimeout(function(){
 
-            setSuccess("Seja Bem-Vindo! Login Realizado com Sucesso!!")
+                setSuccess("Seja Bem-Vindo! Login Realizado com Sucesso!!")
             
+            }, 2000);
 
         });
               
