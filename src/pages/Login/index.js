@@ -9,7 +9,7 @@ export default function Login() {
 
     const[value, setValue] = useState('');
     const[error, setError ] = useState([]);
-    const[success, setSuccess]= useState([]);
+    const[success, setSuccess]= useState('');
     const[datas, setDatas] = useState({}); 
 
 
@@ -65,13 +65,12 @@ export default function Login() {
             setError('');
           
     
-           
-            
-            setValue(resp.data);
-
             setTimeout(function(){
 
-                setSuccess("Seja Bem-Vindo! Login Realizado com Sucesso!!")
+                setSuccess("Seja Bem-Vindo! Login Realizado com Sucesso!!");
+
+
+                setValue(resp.data);
             
             }, 2000);
 
