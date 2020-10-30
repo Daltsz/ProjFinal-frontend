@@ -28,7 +28,7 @@ export default function Home() {
 
       if(resp === 'false'){
 
-        SetRedirectTo(true);
+      return  SetRedirectTo(true);
         
         
 
@@ -82,11 +82,11 @@ export default function Home() {
 
   const logout = () =>{
 
-      const nada = 'x';
+      const nada = '';
 
       setValue(nada);
 
-      SetRedirectTo(true);
+    return  SetRedirectTo(true);
 
   }
 
