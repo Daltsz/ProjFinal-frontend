@@ -32,13 +32,13 @@ export default function Home() {
         
         
 
-      }else{
-
-
-
-        setValue(resp);
-
       }
+
+
+
+      setValue(resp);
+
+      
 
     } 
 
