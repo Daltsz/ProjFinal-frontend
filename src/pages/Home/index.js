@@ -6,7 +6,7 @@ import "../Home/style.css";
 
 export default function Home() {
 
-  const[redirecTo, SetRedirectTo] = useState(true);
+  const[redirecTo, SetRedirectTo] = useState(false);
   const[value, setValue] = useState('');
   const[sentimentos, setSentimentos] = useState('');
   const[resposta, setResposta] = useState('');
@@ -35,9 +35,9 @@ export default function Home() {
       }else{
 
 
-
+        SetRedirectTo(false);
         setValue(resp);
-        return SetRedirectTo(false);
+        
 
 
       }
@@ -86,7 +86,7 @@ export default function Home() {
 
       setValue(nada);
 
-      return SetRedirectTo(true);
+      SetRedirectTo(true);
 
   }
 
