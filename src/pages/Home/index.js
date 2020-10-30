@@ -80,11 +80,11 @@ export default function Home() {
 
   const logout = () =>{
 
-      const nada = '';
+      const nada = 'x';
 
       setValue(nada);
 
-      SetRedirectTo(true);
+      return SetRedirectTo(true);
 
   }
 
