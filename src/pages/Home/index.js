@@ -94,7 +94,7 @@ export default function Home() {
 
     return <Redirect to="/login"></Redirect>
 
-  }else {
+  }else if(!redirecTo){
 
     return (
 
