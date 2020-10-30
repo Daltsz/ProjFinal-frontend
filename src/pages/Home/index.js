@@ -28,17 +28,17 @@ export default function Home() {
 
       if(resp === 'false'){
 
-        return SetRedirectTo(true);
+        SetRedirectTo(true);
         
         
+
+      }else{
+
+
+
+        setValue(resp);
 
       }
-
-
-
-      setValue(resp);
-
-      
 
     } 
 
@@ -84,13 +84,13 @@ export default function Home() {
 
       setValue(nada);
 
-      return SetRedirectTo(true);
+      SetRedirectTo(true);
 
   }
 
 
 
-  if(!redirecTo){
+  if(redirecTo){
 
     return <Redirect to="/login"></Redirect>
 
