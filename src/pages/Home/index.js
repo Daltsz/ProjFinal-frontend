@@ -37,7 +37,7 @@ export default function Home() {
 
 
         setValue(resp);
-        SetRedirectTo(false);
+        return SetRedirectTo(false);
 
 
       }
