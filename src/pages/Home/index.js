@@ -34,11 +34,11 @@ export default function Home() {
 
       }
 
-      
+      SetRedirectTo(false);
 
       setValue(resp);
 
-      SetRedirectTo(false);
+      
 
     } 
 
