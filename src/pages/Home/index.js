@@ -87,7 +87,7 @@ export default function Home() {
 
 
 
-  if(redirecTo){
+  if(!redirecTo){
 
     return <Redirect to="/login"></Redirect>
 
