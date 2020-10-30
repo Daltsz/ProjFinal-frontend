@@ -32,13 +32,13 @@ export default function Home() {
         
         
 
+      }else{
+
+        SetRedirectTo(false);
+
+        setValue(resp);
+
       }
-
-      SetRedirectTo(false);
-
-      setValue(resp);
-
-      
 
     } 
 
