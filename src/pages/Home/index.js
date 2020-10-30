@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Link, Redirect} from "react-router-dom";
+import {Redirect} from "react-router-dom";
 import api from '../../services/api';
 import "../Home/style.css";
 
@@ -90,46 +90,44 @@ export default function Home() {
 
 
 
-  if(redirecTo){
-
-    return <Redirect to="/login"></Redirect>
-
-  }else if(!redirecTo){
+  if(!redirecTo){
 
     return (
+      <div className="divLogado">
 
 
-        <div className="divLogado">
+          <button className="btnDeslogar"  onClick={logout}>Logout</button>
 
 
-            <button className="btnDeslogar"  onClick={logout}>Logout</button>
+            
+          <h1>SINTA-SE A VONTADE</h1>
 
+          <form className="formLogado" onSubmit={enviarAnalise}>
 
-              
-            <h1>SINTA-SE A VONTADE</h1>
+            <textarea className="textArea" name="mensagem"  placeholder="Escreva a primeira palavra que vem em sua mente!!!" onChange={(e) => setSentimentos(e.target.value)}></textarea>
 
-            <form className="formLogado" onSubmit={enviarAnalise}>
+            <button className="btnTextArea" type="submit">Analizar</button>
 
-              <textarea className="textArea" name="mensagem"  placeholder="Escreva a primeira palavra que vem em sua mente!!!" onChange={(e) => setSentimentos(e.target.value)}></textarea>
+            {message && <span className="message">{message}</span>}
 
-              <button className="btnTextArea" type="submit">Analizar</button>
+          </form>
 
-              {message && <span className="message">{message}</span>}
+          <div className="divBoxAnswer">
+            { 
+              (resposta === '' )  ? <p></p> : <h1><span>{`${resposta}`}</span></h1>
 
-            </form>
+            } 
+          </div>
 
-            <div className="divBoxAnswer">
-              { 
-                (resposta === '' )  ? <p></p> : <h1><span>{`${resposta}`}</span></h1>
+        
 
-              } 
-            </div>
+      </div>
 
-          
+    );
 
-        </div>
+  }else{
 
-      );
+    return <Redirect to="/login"></Redirect>
 
   }
 }
