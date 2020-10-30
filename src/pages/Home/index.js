@@ -6,7 +6,7 @@ import "../Home/style.css";
 
 export default function Home() {
 
-  const[redirecTo, SetRedirectTo] = useState(false);
+  const[redirecTo, SetRedirectTo] = useState(true);
   const[value, setValue] = useState('');
   const[sentimentos, setSentimentos] = useState('');
   const[resposta, setResposta] = useState('');
@@ -87,7 +87,7 @@ export default function Home() {
 
 
 
-  if(!redirecTo){
+  if(redirecTo){
 
     return <Redirect to="/login"></Redirect>
 
