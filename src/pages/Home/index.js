@@ -34,8 +34,11 @@ export default function Home() {
 
       }
 
+      
 
       setValue(resp);
+
+      SetRedirectTo(false);
 
     } 
 
@@ -91,7 +94,7 @@ export default function Home() {
 
     return <Redirect to="/login"></Redirect>
 
-  }else{
+  }else {
 
   return (
 
