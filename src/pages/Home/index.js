@@ -34,7 +34,7 @@ export default function Home() {
 
       }else{
 
-        SetRedirectTo(false);
+
 
         setValue(resp);
 
@@ -96,40 +96,40 @@ export default function Home() {
 
   }else {
 
-  return (
+    return (
 
 
-      <div className="divLogado">
+        <div className="divLogado">
 
 
-          <button className="btnDeslogar"  onClick={logout}>Logout</button>
+            <button className="btnDeslogar"  onClick={logout}>Logout</button>
 
 
-            
-          <h1>SINTA-SE A VONTADE</h1>
+              
+            <h1>SINTA-SE A VONTADE</h1>
 
-          <form className="formLogado" onSubmit={enviarAnalise}>
+            <form className="formLogado" onSubmit={enviarAnalise}>
 
-            <textarea className="textArea" name="mensagem"  placeholder="Escreva a primeira palavra que vem em sua mente!!!" onChange={(e) => setSentimentos(e.target.value)}></textarea>
+              <textarea className="textArea" name="mensagem"  placeholder="Escreva a primeira palavra que vem em sua mente!!!" onChange={(e) => setSentimentos(e.target.value)}></textarea>
 
-            <button className="btnTextArea" type="submit">Analizar</button>
+              <button className="btnTextArea" type="submit">Analizar</button>
 
-            {message && <span className="message">{message}</span>}
+              {message && <span className="message">{message}</span>}
 
-          </form>
+            </form>
 
-          <div className="divBoxAnswer">
-            { 
-              (resposta === '' )  ? <p></p> : <h1><span>{`${resposta}`}</span></h1>
+            <div className="divBoxAnswer">
+              { 
+                (resposta === '' )  ? <p></p> : <h1><span>{`${resposta}`}</span></h1>
 
-            } 
-          </div>
+              } 
+            </div>
 
-        
+          
 
-      </div>
+        </div>
 
-    );
+      );
 
   }
 }
