@@ -6,7 +6,7 @@ import "../Home/style.css";
 
 export default function Home() {
 
-  const[redirecTo, SetRedirectTo] = useState(true);
+  const[redirecTo, SetRedirectTo] = useState(false);
   const[value, setValue] = useState('');
   const[sentimentos, setSentimentos] = useState('');
   const[resposta, setResposta] = useState('');
