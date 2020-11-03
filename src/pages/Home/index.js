@@ -80,13 +80,40 @@ export default function Home() {
 
 
 
-  const logout = () =>{
+  async function logout (){
 
-      const nada = '';
 
-      setValue(nada);
 
-    return  SetRedirectTo(true);
+      try {
+
+        const nada = '';
+
+        setValue(nada);
+  
+  
+        
+        SetRedirectTo(true);
+  
+
+        const resp = await api.post('/api/logout', 
+          {
+
+            logoout: 'x'
+
+          }
+          
+        
+        );
+
+        console.log(resp);
+        
+               
+      }catch (error) {
+        
+        console.log("Mensagem Não enviada", error);
+
+      }
+    
 
   }
 
